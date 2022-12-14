@@ -7,18 +7,33 @@ import img5 from "../Assetes/New folder/img-5.png";
 import img6 from "../Assetes/New folder/img-6.png";
 import img7 from "../Assetes/New folder/img-7.png";
 import img8 from "../Assetes/New folder/img-8.png";
-
+import { useNavigate } from "react-router";
 import "./Card.css";
 
-const cardData = [img1, img2, img3, img4, img5, img6, img7, img8];
+const cardData = [
+  { id: 1, img: img1 },
+  { id: 2, img: img2 },
+  { id: 3, img: img3 },
+  { id: 4, img: img4 },
+  { id: 5, img: img5 },
+  { id: 6, img: img6 },
+  { id: 7, img: img7 },
+  { id: 8, img: img8 },
+];
 
 const Card = () => {
+  const navigate = useNavigate();
   return (
     <div className="main-container">
       {cardData.map((x) => (
-        <div class="card-wrapper">
+        <div
+          class="card-wrapper"
+          onClick={() => {
+            navigate(`/card/${x.id}`);
+          }}
+        >
           <div class="card-top">
-            <img class="image" src={x} />
+            <img class="image" src={x.img} />
           </div>
           <div class="card-bottom">
             <span class="top-text">Premium Membership</span>
