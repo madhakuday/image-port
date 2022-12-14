@@ -23,13 +23,26 @@ const cardData = [
 
 const SingalCard = () => {
   const { id } = useParams();
+  const naviGate = useNavigate();
   const [data, setData] = useState([]);
+
   useEffect(() => {
     let MainData = cardData.filter((x) => x.id == id);
     setData(MainData);
   }, []);
   return (
     <div>
+      <span
+        style={{
+          background: "#FFF35B",
+          borderRadius: "50%",
+          padding: "5px",
+          textAlign: "center",
+        }}
+        onClick={() => naviGate("/")}
+      >
+        &larr;
+      </span>
       {data.map((x) => (
         <>
           <div
