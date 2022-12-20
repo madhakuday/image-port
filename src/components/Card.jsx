@@ -10,16 +10,18 @@ const Card = () => {
     <>
       <div className="main-container">
         {cardData.map((x) => (
-          <div
-            class="card-wrapper"
-            onClick={() => {
-              navigate(`/card/${x.id}`);
-            }}
-          >
-            <div class="card-top">
-              <img class="image" src={x.img} />
-            </div>
-            <div class="card-bottom">
+          <div className="container-card">
+            <div className="card-bottom-title">React js</div>
+            <div
+              class="card-wrapper"
+              onClick={() => {
+                navigate(`/card/${x.id}`);
+              }}
+            >
+              <div class="card-top">
+                <img class="image" src={x.img} />
+              </div>
+              {/* <div class="card-bottom">
               <span class="top-text">Premium Membership</span>
               <br />
               <span class="bottom-text">
@@ -28,6 +30,7 @@ const Card = () => {
               </span>
               <br />
               <button class="button">Join Us</button>
+            </div> */}
             </div>
           </div>
         ))}

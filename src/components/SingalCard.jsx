@@ -19,6 +19,8 @@ const SingalCard = () => {
           borderRadius: "50%",
           padding: "5px",
           textAlign: "center",
+          fontSize: "1.5rem",
+          cursor: "pointer",
         }}
         onClick={() => naviGate("/")}
       >
