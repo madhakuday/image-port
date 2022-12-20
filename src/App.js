@@ -7,11 +7,13 @@ import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import SingalCard from "./components/SingalCard";
 import RouteComp from "./Routes/Route";
+import Tes from "./test/Tes";
 function App() {
   return (
     <>
       <BrowserRouter>
-        <RouteComp />
+        {/* <RouteComp /> */}
+        <Tes />
       </BrowserRouter>
     </>
   );
