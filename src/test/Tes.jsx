@@ -2,20 +2,19 @@ import React from "react";
 import "./Tes.css";
 import cardData from "../data/cardData";
 import { Link } from "react-router-dom";
+window.addEventListener("resize", scrollGrid);
+window.addEventListener("scroll", scrollGrid);
+
+function scrollGrid() {
+  let bodyHeight = document?.body?.offsetHeight,
+    mainHeight = document?.querySelector("main")?.offsetHeight,
+    cards = document.querySelector(".cards"),
+    transY = (window.pageYOffset / (mainHeight - bodyHeight)) * -100;
+
+  cards?.style?.setProperty("--scroll", transY + "%");
+}
+scrollGrid();
 const Tes = () => {
-  //   window.addEventListener("resize", scrollGrid);
-  //   window.addEventListener("scroll", scrollGrid);
-
-  //   function scrollGrid() {
-  //     let bodyHeight = document.body.offsetHeight,
-  //       mainHeight = document.querySelector("main").offsetHeight,
-  //       cards = document.querySelector(".cards"),
-  //       transY = (window.pageYOffset / (mainHeight - bodyHeight)) * -100;
-
-  //     cards.style.setProperty("--scroll", transY + "%");
-  //   }
-  //   scrollGrid();
-
   return (
     <div>
       <main>
