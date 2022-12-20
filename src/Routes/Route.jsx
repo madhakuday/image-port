@@ -4,6 +4,7 @@ import Card from "../components/Card";
 import HamburgerMenu from "../components/Nav";
 import SingalCard from "../components/SingalCard";
 import TempNav from "../components/TempNav";
+import Tes from "../test/Tes";
 
 const RouteComp = () => {
   return (
@@ -11,7 +12,7 @@ const RouteComp = () => {
       {/* <HamburgerMenu /> */}
       <TempNav />
       <Routes>
-        <Route path="/" element={<Card />} />
+        <Route path="/" element={<Tes />} />
         <Route path="/card/:id" element={<SingalCard />} />
       </Routes>
     </div>

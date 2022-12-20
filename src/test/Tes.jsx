@@ -1,14 +1,27 @@
 import React from "react";
 import "./Tes.css";
 import cardData from "../data/cardData";
+import { Link } from "react-router-dom";
 const Tes = () => {
-  /** */
+  window.addEventListener("resize", scrollGrid);
+  window.addEventListener("scroll", scrollGrid);
+
+  function scrollGrid() {
+    let bodyHeight = document.body.offsetHeight,
+      mainHeight = document.querySelector("main").offsetHeight,
+      cards = document.querySelector(".cards"),
+      transY = (window.pageYOffset / (mainHeight - bodyHeight)) * -100;
+
+    cards.style.setProperty("--scroll", transY + "%");
+  }
+  scrollGrid();
+
   return (
     <div>
       <main>
         <div className="cards">
           {cardData.map((x) => (
-            <a className="stack" href="#">
+            <Link className="stack" to={`/card/${x.id}`}>
               <div
                 style={{ backgroundImage: `url(${x.img})` }}
                 className="card top"
@@ -47,7 +60,7 @@ const Tes = () => {
                 </div>
               </div> */}
               <div className="card shadow"></div>
-            </a>
+            </Link>
           ))}
         </div>
       </main>

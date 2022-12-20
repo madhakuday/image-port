@@ -12,8 +12,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        {/* <RouteComp /> */}
-        <Tes />
+        <RouteComp />
+        {/* <Tes /> */}
       </BrowserRouter>
     </>
   );
