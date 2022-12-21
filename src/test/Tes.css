@@ -156,7 +156,8 @@ main {
     height: calc(var(--cardH) * 18 - 1.5em);
   }
   .cards {
-    grid-template: repeat(18, var(--cardH)) / repeat(2, var(--cardW));
+    /* grid-template: repeat(18, var(--cardH)) / repeat(2, var(--cardW)); */
+    grid-template: repeat(10, var(--cardH)) / repeat(2, var(--cardW));
   }
 }
 @media screen and (min-width: 641px) {
@@ -164,7 +165,8 @@ main {
     height: calc(var(--cardH) * 12 - 1.5em);
   }
   .cards {
-    grid-template: repeat(12, var(--cardH)) / repeat(3, var(--cardW));
+    /* grid-template: repeat(12, var(--cardH)) / repeat(3, var(--cardW)); */
+    grid-template: repeat(10, var(--cardH)) / repeat(3, var(--cardW));
   }
 }
 @media screen and (min-width: 961px) {
