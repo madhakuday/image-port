@@ -8,8 +8,10 @@
 }
 :root {
   font-size: 18px;
-  --cardW: 14em;
-  --cardH: 8em;
+  --cardW: 17em;
+  --cardH: 10em;
+  /* --cardW: 14em;
+  --cardH: 8em; */
   --cardZInc: 2em;
 }
 body {
@@ -178,7 +180,8 @@ main {
     height: calc(var(--cardH) * 8 - 1.5em);
   }
   .cards {
-    grid-template: repeat(8, var(--cardH)) / repeat(5, var(--cardW));
+    /* grid-template: repeat(8, var(--cardH)) / repeat(5, var(--cardW)); */
+    grid-template: repeat(4, var(--cardH)) / repeat(3, var(--cardW));
   }
 }
 
