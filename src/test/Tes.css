@@ -79,15 +79,15 @@ main {
 .stack:nth-child(8n + 6) .card,
 .stack:nth-child(8n + 7) .card,
 .stack:nth-child(8n + 8) .card {
-  filter: hue-rotate(90deg);
-  -webkit-filter: hue-rotate(90deg);
+  /* filter: hue-rotate(90deg); */
+  /* -webkit-filter: hue-rotate(90deg); */
 }
 .stack:nth-child(12n + 9) .card,
 .stack:nth-child(12n + 10) .card,
 .stack:nth-child(12n + 11) .card,
 .stack:nth-child(12n + 12) .card {
-  filter: hue-rotate(180deg);
-  -webkit-filter: hue-rotate(180deg);
+  /* filter: hue-rotate(180deg); */
+  /* -webkit-filter: hue-rotate(180deg); */
 }
 /* Card hover */
 .stack:hover .top,
